@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConstraintSetsActivity"></activity>
+        <activity android:name=".CollapsingToolbarLayoutActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ConstraintSetsActivity" />
         <activity android:name=".PlaceHolderActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

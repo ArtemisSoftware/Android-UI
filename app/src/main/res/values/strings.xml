@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">AndroidUI</string>
     <string name="dummy_text">Saint Seiya</string>
+    <string name="action_settings">Settings</string>
+    <string name="large_text">Hyoga de Cisne é um Cavaleiro de Bronze do século XX. Um dos 100 órfãos reunidos por Mitsumasa Kido para proteger a deusa Atena. Nas frias terras das Geleiras Eternas, no leste da Sibéria, Hyoga torna-se Cavaleiro tendo como mestre Camus, o Cavaleiro de Ouro de Aquário, que manipula o frio. Seguindo os ensinamentos do seu mestre, ele tenta manter-se racional diante de tudo, mas possui um lado emotivo que não consegue abandonar.</string>
 </resources>
