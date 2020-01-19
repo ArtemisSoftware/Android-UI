@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidUI</string>
+    <string name="dummy_text">Saint Seiya</string>
 </resources>
