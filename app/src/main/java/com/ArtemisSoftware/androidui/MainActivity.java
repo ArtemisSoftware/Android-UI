@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         ((Button) findViewById(R.id.btn_ctr_lyt_const_sets)).setOnClickListener(btn_ctr_lyt_const_sets_OnClickListener);
         ((Button) findViewById(R.id.btn_col_tool_lyt)).setOnClickListener(btn_col_tool_lyt_OnClickListener);
         ((Button) findViewById(R.id.btn_grid_menu)).setOnClickListener(btn_grid_menu_OnClickListener);
+        ((Button) findViewById(R.id.btn_company_layout)).setOnClickListener(btn_company_layout_OnClickListener);
     }
 
     Button.OnClickListener btn_ctr_lyt_OnClickListener = new View.OnClickListener() {
@@ -57,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View arg0) {
 
             Intent browserIntent = new Intent(getApplicationContext(), GridMenuActivity.class);
+            startActivity(browserIntent);
+        }
+    };
+
+    Button.OnClickListener btn_company_layout_OnClickListener = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View arg0) {
+
+            Intent browserIntent = new Intent(getApplicationContext(), CompanyLayoutActivity.class);
             startActivity(browserIntent);
         }
     };
