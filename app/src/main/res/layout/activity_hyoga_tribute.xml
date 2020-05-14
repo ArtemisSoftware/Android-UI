@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/imgeview_placeholder"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:src="@drawable/hyoga_banner"
                 android:tint="#11000000"
@@ -32,7 +32,7 @@
             <FrameLayout
                 android:id="@+id/framelayout_title"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="105dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:background="@color/primary_HyogaTribute"
                 android:orientation="vertical"
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
-        app:behavior_overlapTop="30dp"
+        app:behavior_overlapTop="20dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.cardview.widget.CardView
@@ -116,7 +116,7 @@
                 android:id="@+id/textview_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="18dp"
                 android:gravity="center_vertical"
                 android:text="@string/cygnus_hyoga"
                 android:textColor="@android:color/white"

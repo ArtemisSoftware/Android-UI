@@ -68,7 +68,7 @@
 
             <ImageView
                 android:id="@+id/img2"
-                android:src="@drawable/hyoga"
+                android:src="@drawable/hyoga_banner"
                 android:background="@color/pink"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"

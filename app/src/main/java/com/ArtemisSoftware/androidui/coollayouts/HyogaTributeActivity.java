@@ -13,6 +13,9 @@ import android.widget.TextView;
 import com.ArtemisSoftware.androidui.R;
 import com.google.android.material.appbar.AppBarLayout;
 
+/**
+ * https://github.com/saulmm/CoordinatorBehaviorExample
+ */
 public class HyogaTributeActivity extends AppCompatActivity
         implements AppBarLayout.OnOffsetChangedListener{
 
