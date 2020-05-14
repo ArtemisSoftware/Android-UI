@@ -1,4 +1,4 @@
-package com.ArtemisSoftware.androidui;
+package com.ArtemisSoftware.androidui.coollayouts;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.ArtemisSoftware.androidui.R;
 
 public class CompanyLayoutActivity extends AppCompatActivity {
 
