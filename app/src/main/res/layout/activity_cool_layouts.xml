@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".coollayouts.CoolLayoutsActivity">
 
+
+<!--
+        app:background_layout="@layout/background_view"-->
+
+    <net.wujingchao.android.view.MultiCardMenu
+        android:id="@+id/multi_card_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:boundary="true"
+        app:fade="true"
+        app:margin_top="50dp"
+        app:title_bar_height_display="20dp"
+        app:title_bar_height_no_display="60dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_launcher_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Ice Cream"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@color/pink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_launcher_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Ice Cream"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </net.wujingchao.android.view.MultiCardMenu>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
