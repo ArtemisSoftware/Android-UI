@@ -32,6 +32,11 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
 
         mc = (MultiCardMenu) findViewById(R.id.multi_card_menu);
 
+        ((ImageView)  findViewById(R.id.img1)).setOnClickListener(this);
+        ((ImageView)  findViewById(R.id.img2)).setOnClickListener(this);
+        ((ImageView)  findViewById(R.id.img3)).setOnClickListener(this);
+
+
         mc.setOnDisplayOrHideListener(new MultiCardMenu.OnDisplayOrHideListener() {
             @Override
             public void onDisplay(int which) {
@@ -51,8 +56,7 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
         });
 
 
-        ((ImageView)  findViewById(R.id.img1)).setOnClickListener(this);
-        ((ImageView)  findViewById(R.id.img2)).setOnClickListener(this);
+
 
 
 //        int [] imgRes = {R.drawable.ent,R.drawable.qa};
@@ -114,6 +118,13 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
             case R.id.img2:
 
                 browserIntent = new Intent(getApplicationContext(), HyogaTributeActivity.class);
+                startActivity(browserIntent);
+                break;
+
+
+            case R.id.img3:
+
+                browserIntent = new Intent(getApplicationContext(), ParallaxTabsActivity.class);
                 startActivity(browserIntent);
                 break;
 

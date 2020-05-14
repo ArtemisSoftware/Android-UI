@@ -78,6 +78,49 @@
         </LinearLayout>
 
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/ic_launcher_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/parallax_tabs"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:src="@drawable/header_parallax"
+                android:background="@color/pink"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_margin="5dip"
+                android:background="#CDA49E"
+                android:gravity="center"
+                android:text="For The Dream"
+                android:textColor="#471F1F"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="380dip"

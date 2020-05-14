@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".coollayouts.ParallaxTabsActivity"></activity>
+        <activity android:name=".coollayouts.ParallaxTabsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".coollayouts.HyogaTributeActivity"
             android:theme="@style/AppThemeHyogaTribute" />
