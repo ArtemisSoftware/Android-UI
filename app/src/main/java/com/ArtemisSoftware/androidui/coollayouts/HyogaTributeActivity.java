@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.LinearLayout;
@@ -37,7 +38,7 @@ public class HyogaTributeActivity extends AppCompatActivity
 
         mAppBarLayout.addOnOffsetChangedListener(this);
 
-        //mToolbar.inflateMenu(R.menu.menu_main);
+        mToolbar.inflateMenu(R.menu.menu_hyoga_tribute);
         startAlphaAnimation(mTitle, 0, View.INVISIBLE);
     }
 
@@ -47,6 +48,13 @@ public class HyogaTributeActivity extends AppCompatActivity
         mTitle          = (TextView) findViewById(R.id.textview_title);
         mTitleContainer = (LinearLayout) findViewById(R.id.linearlayout_title);
         mAppBarLayout   = (AppBarLayout) findViewById(R.id.appbar);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_hyoga_tribute, menu);
+        return true;
     }
 
 
