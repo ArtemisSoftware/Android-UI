@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,10 @@ import com.ArtemisSoftware.androidui.R;
 
 import net.wujingchao.android.view.MultiCardMenu;
 
-public class CoolLayoutsActivity extends AppCompatActivity {
+public class CoolLayoutsActivity extends AppCompatActivity implements View.OnClickListener {
 
     MultiCardMenu mc;
-    ImageView img1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +29,6 @@ public class CoolLayoutsActivity extends AppCompatActivity {
 
 
     private void initView() {
-
-        img1 = (ImageView)  findViewById(R.id.img1);
-
-        img1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         mc = (MultiCardMenu) findViewById(R.id.multi_card_menu);
 
@@ -57,6 +49,11 @@ public class CoolLayoutsActivity extends AppCompatActivity {
                 mc.show(which);
             }
         });
+
+
+        ((ImageView)  findViewById(R.id.img1)).setOnClickListener(this);
+        ((ImageView)  findViewById(R.id.img2)).setOnClickListener(this);
+
 
 //        int [] imgRes = {R.drawable.ent,R.drawable.qa};
         final int [] imgRes = {R.drawable.camerabutton,R.drawable.favoritebutton,R.drawable.ic_launcher};
@@ -99,4 +96,32 @@ public class CoolLayoutsActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onClick(View v) {
+
+
+        Intent browserIntent;
+
+        switch (v.getId()){
+
+            case R.id.img1:
+
+                browserIntent = new Intent(getApplicationContext(), CompanyLayoutActivity.class);
+                startActivity(browserIntent);
+                break;
+
+
+            case R.id.img2:
+
+                browserIntent = new Intent(getApplicationContext(), CompanyLayoutActivity.class);
+                startActivity(browserIntent);
+                break;
+
+            default:
+                break;
+
+        }
+
+
+    }
 }
