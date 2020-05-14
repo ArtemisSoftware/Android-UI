@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.ArtemisSoftware.androidui.R;
+import com.ArtemisSoftware.androidui.coollayouts.adapters.SimpleRecyclerAdapter;
 import com.ArtemisSoftware.androidui.coollayouts.models.Version;
 
 import java.util.Arrays;
@@ -46,10 +47,10 @@ public class ParallaxFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         List<String> list = Arrays.asList(Version.data);
-/*
+
         SimpleRecyclerAdapter adapter = new SimpleRecyclerAdapter(list);
         recyclerView.setAdapter(adapter);
-*/
+
         return view;
     }
 }
