@@ -10,4 +10,7 @@
     <string name="cygnus_hyoga">Cygnus Hyoga</string>
     <string name="diamond_dust">Diamond Dust</string>
     <string name="parallax_tabs">Parallax Tabs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

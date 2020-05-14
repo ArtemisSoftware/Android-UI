@@ -19,7 +19,7 @@
 
 
 
-    <!-- Pretty layout -->
+    <!-- ########## Parallax -->
 
     <style name="AppThemeCompanyLayout" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -28,6 +28,8 @@
         <item name="colorAccent">@color/colorAccent_CompanyLayout</item>
     </style>
 
+
+    <!-- ########## Hyoga tribute -->
 
     <style name="AppThemeHyogaTribute" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary_HyogaTribute</item>

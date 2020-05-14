@@ -17,14 +17,21 @@
 
     <color name="black_overlay">#66000000</color>
 
+
+    <!-- ########## Company -->
+
     <color name="colorPrimary_CompanyLayout">#232323</color>
     <color name="colorPrimaryDark_CompanyLayout">#232323</color>
     <color name="colorAccent_CompanyLayout">#232323</color>
 
 
+    <!-- ########## Hyoga tribute -->
+
     <color name="primary_HyogaTribute">#23395d</color>
     <color name="primaryDark_HyogaTribute">#152238</color>
 
+
+    <!-- ########## Parallax -->
 
     <!--Indigo 500-->
     <color name="primary_500">#3F51B5</color>
