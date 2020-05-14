@@ -113,7 +113,7 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
 
             case R.id.img2:
 
-                browserIntent = new Intent(getApplicationContext(), CompanyLayoutActivity.class);
+                browserIntent = new Intent(getApplicationContext(), HyogaTributeActivity.class);
                 startActivity(browserIntent);
                 break;
 

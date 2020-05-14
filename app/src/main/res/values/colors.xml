@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="white">#fff</color>
+
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="lightgray">#ededed</color>
     <color name="deeppurple">#7c4dff</color>
@@ -18,5 +20,9 @@
     <color name="colorPrimary_CompanyLayout">#232323</color>
     <color name="colorPrimaryDark_CompanyLayout">#232323</color>
     <color name="colorAccent_CompanyLayout">#232323</color>
+
+
+    <color name="primary_HyogaTribute">#785447</color>
+    <color name="primaryDark_HyogaTribute">#5B3F36</color>
 
 </resources>

@@ -29,4 +29,9 @@
     </style>
 
 
+    <style name="AppThemeHyogaTribute" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_HyogaTribute</item>
+        <item name="colorPrimaryDark">@color/primaryDark_HyogaTribute</item>
+    </style>
+
 </resources>
