@@ -25,6 +25,9 @@ import androidx.palette.graphics.Palette;
  */
 public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
+
+    private ParallaxViewPagerAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +48,14 @@ public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.addOnTabSelectedListener(this);
 
-        /*
+
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
             assert tab != null;
             tab.setCustomView(null);
-            tab.setCustomView(viewPager.getTabView(i));
+            tab.setCustomView(adapter.getTabView(i));
         }
-*/
+
 
         final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.htab_collapse_toolbar);
 
@@ -77,6 +80,7 @@ public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout
         }
 
 
+        highLightCurrentTab(0); // for initial selected tab view
     }
 
 
@@ -85,7 +89,7 @@ public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ParallaxViewPagerAdapter adapter = new ParallaxViewPagerAdapter(getSupportFragmentManager(), this);
+        adapter = new ParallaxViewPagerAdapter(getSupportFragmentManager(), this);
         adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.cyan_50)), "Cyan");
         adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.amber_50)), "Amber");
         adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.purple_50)), "Purple");
@@ -120,6 +124,27 @@ public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout
     public void onTabReselected(TabLayout.Tab tab) {
 
     }
+
+
+    private void highLightCurrentTab(int position) {
+
+        TabLayout tabLayout = findViewById(R.id.htab_tabs);
+
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            assert tab != null;
+            tab.setCustomView(null);
+            tab.setCustomView(adapter.getTabView(i));
+        }
+
+        TabLayout.Tab tab = tabLayout.getTabAt(position);
+        assert tab != null;
+        tab.setCustomView(null);
+        tab.setCustomView(adapter.getSelectedTabView(position));
+    }
+
+
+
 
         /*
     @Override
