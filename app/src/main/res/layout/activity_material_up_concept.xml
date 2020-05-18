@@ -6,13 +6,13 @@
     android:layout_height="match_parent">
     ​
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/materialup.appbar"
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         ​
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/main.collapsing"
+            android:id="@+id/collapsing"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:expandedTitleMarginStart="48dp"
@@ -20,7 +20,7 @@
             app:layout_scrollFlags="scroll|snap">
             ​
             <ImageView
-                android:id="@+id/materialup.profile_backdrop"
+                android:id="@+id/profile_backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -29,7 +29,7 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
         ​​
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/materialup.toolbar"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
@@ -38,7 +38,7 @@
             style="@style/ToolBarWithNavigationBack"/>
         ​
         <LinearLayout
-            android:id="@+id/materialup.title_container"
+            android:id="@+id/title_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -64,7 +64,7 @@
         </LinearLayout>
         ​
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/materialup.tabs"
+            android:id="@+id/tabs"
             android:layout_width="fill_parent"
             android:layout_height="?attr/actionBarSize"
             app:tabSelectedTextColor="?android:attr/textColorPrimaryInverse"
@@ -74,11 +74,10 @@
     </com.google.android.material.appbar.AppBarLayout>
     ​
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/materialup.viewpager"
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
     ​
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_height="wrap_content"
@@ -87,16 +86,15 @@
         android:layout_gravity="bottom|right|end"
         android:src="@drawable/ic_comment_24dp"
         android:layout_margin="@dimen/activity_horizontal_margin"
-        android:clickable="true"
-        />
+        android:clickable="true"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/materialup.profile_image"
+        android:id="@+id/profile_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/turbo_killer"
-        app:layout_anchor="@id/materialup.title_container"
+        app:layout_anchor="@id/title_container"
         android:elevation="8dp"
         app:layout_scrollFlags="scroll"
         app:layout_anchorGravity="top|center_horizontal"/>

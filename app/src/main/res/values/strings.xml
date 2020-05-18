@@ -11,12 +11,15 @@
     <string name="diamond_dust">Diamond Dust</string>
     <string name="parallax_tabs">Parallax Tabs</string>
 
+    <string name="material_up_concept">Material Up Concept</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_mup_name">Turbo Killer</string>
     <string name="subtitle_mup">Carpenter Brut</string>
 
 
+    <string name="simple_title">Simple Title</string>
 
     <string name="lorem">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit.

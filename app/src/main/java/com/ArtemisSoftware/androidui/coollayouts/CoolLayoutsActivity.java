@@ -35,6 +35,7 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
         ((ImageView)  findViewById(R.id.img1)).setOnClickListener(this);
         ((ImageView)  findViewById(R.id.img2)).setOnClickListener(this);
         ((ImageView)  findViewById(R.id.img3)).setOnClickListener(this);
+        ((ImageView)  findViewById(R.id.img4)).setOnClickListener(this);
 
 
         mc.setOnDisplayOrHideListener(new MultiCardMenu.OnDisplayOrHideListener() {
@@ -125,6 +126,13 @@ public class CoolLayoutsActivity extends AppCompatActivity implements View.OnCli
             case R.id.img3:
 
                 browserIntent = new Intent(getApplicationContext(), ParallaxTabsActivity.class);
+                startActivity(browserIntent);
+                break;
+
+
+            case R.id.img4:
+
+                browserIntent = new Intent(getApplicationContext(), MaterialUpConceptActivity.class);
                 startActivity(browserIntent);
                 break;
 

@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 import com.ArtemisSoftware.androidui.R;
 import com.ArtemisSoftware.androidui.coollayouts.adapters.SimpleFragmentPagerAdapter;
+import com.ArtemisSoftware.androidui.coollayouts.fragments.SimpleFragment;
 import com.ArtemisSoftware.androidui.coollayouts.models.PagerFragment;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -32,12 +33,12 @@ public class MaterialUpConceptActivity extends AppCompatActivity implements AppB
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material_up_concept);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.materialup_tabs);
-        ViewPager viewPager  = (ViewPager) findViewById(R.id.materialup_viewpager);
-        AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.materialup_appbar);
-        mProfileImage = (ImageView) findViewById(R.id.materialup_profile_image);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        ViewPager viewPager  = (ViewPager) findViewById(R.id.viewpager);
+        AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.appbar);
+        mProfileImage = (ImageView) findViewById(R.id.profile_image);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.materialup_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 onBackPressed();
@@ -48,17 +49,13 @@ public class MaterialUpConceptActivity extends AppCompatActivity implements AppB
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
 
         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), this);
-        //adapter.addFragment(new PagerFragment());
+        adapter.addFragment(new PagerFragment(new SimpleFragment(), getString(R.string.simple_title)));
 
-        /*
-        viewPager.setAdapter(new TabsAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-        */
+
     }
 
-    public static void start(Context c) {
-        c.startActivity(new Intent(c, MaterialUpConceptActivity.class));
-    }
 
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
