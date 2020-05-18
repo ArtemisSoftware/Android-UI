@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.ArtemisSoftware.androidui.R;
+import com.ArtemisSoftware.androidui.coollayouts.adapters.SimpleFragmentPagerAdapter;
+import com.ArtemisSoftware.androidui.coollayouts.models.PagerFragment;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 
@@ -44,6 +46,9 @@ public class MaterialUpConceptActivity extends AppCompatActivity implements AppB
 
         appbarLayout.addOnOffsetChangedListener(this);
         mMaxScrollSize = appbarLayout.getTotalScrollRange();
+
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), this);
+        //adapter.addFragment(new PagerFragment());
 
         /*
         viewPager.setAdapter(new TabsAdapter(getSupportFragmentManager()));
@@ -79,28 +84,5 @@ public class MaterialUpConceptActivity extends AppCompatActivity implements AppB
                     .start();
         }
     }
-/*
-    private static class TabsAdapter extends FragmentPagerAdapter {
-        private static final int TAB_COUNT = 2;
 
-        TabsAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public int getCount() {
-            return TAB_COUNT;
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-            return FakePageFragment.newInstance();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return "Tab " + String.valueOf(position);
-        }
-    }
-    */
 }
