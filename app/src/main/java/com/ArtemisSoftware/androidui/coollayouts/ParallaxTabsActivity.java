@@ -90,10 +90,24 @@ public class ParallaxTabsActivity extends AppCompatActivity implements TabLayout
 
     private void setupViewPager(ViewPager viewPager) {
         adapter = new ParallaxViewPagerAdapter(getSupportFragmentManager(), this);
-        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.cyan_50)), "Cyan");
-        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.amber_50)), "Amber");
-        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.purple_50)), "Purple");
+        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.cyan_50)), "Cyan", R.drawable.ic_home_24dp);
+        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.amber_50)), "Amber", R.drawable.ic_notifications_24dp);
+        adapter.addFrag(new ParallaxFragment(ContextCompat.getColor(this, R.color.purple_50)), "Purple", R.drawable.ic_star_border_24dp);
         viewPager.setAdapter(adapter);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+            @Override
+            public void onPageSelected(int position) {
+                highLightCurrentTab(position); // for tab change
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
     }
 
     @Override
